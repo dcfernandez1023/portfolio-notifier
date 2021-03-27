@@ -48,4 +48,4 @@ def send_email():
     return make_response({}, 200)
 
 
-app.run(port=5000)
+app.run(threaded=True)
