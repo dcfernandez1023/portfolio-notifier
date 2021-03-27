@@ -4,7 +4,6 @@ from flask_mail import Mail, Message
 from datetime import date, datetime
 import pytz
 
-
 app = Flask(__name__)
 app.config["MAIL_SERVER"] = "smtp.googlemail.com"
 app.config['MAIL_PORT'] = 587
@@ -48,4 +47,5 @@ def send_email():
     return make_response({}, 200)
 
 
-app.run(threaded=True)
+if __name__ == "__main__":
+    app.run()
